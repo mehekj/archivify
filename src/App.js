@@ -6,6 +6,7 @@ function App() {
 		fetch("/api/bye").then((response) =>
 			response.text().then((text) => console.log(text))
 		);
+		console.log("FETCHED");
 	}, []);
 
 	return (
