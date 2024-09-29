@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import "./App.css";
 
 function App() {
+	useEffect(() => {
+		fetch("/api/bye").then((response) =>
+			response.text().then((text) => console.log(text))
+		);
+	}, []);
+
 	return (
 		<div className="App">
 			<header className="App-header">

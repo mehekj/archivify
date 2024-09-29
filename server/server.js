@@ -13,3 +13,8 @@ app.use(express.static(path.join(dirname, "../build")));
 app.listen(PORT, () => {
 	console.log("Listening on port", PORT);
 });
+
+app.get("/api/bye", (req, res) => {
+	console.log("BYE");
+	res.send("BYE");
+});
