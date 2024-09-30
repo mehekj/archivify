@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import api from "./api.js";
-import cors from "cors";
 
 const PORT = process.env.port || 8080;
 const app = express();
