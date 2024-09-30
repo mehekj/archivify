@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./App.css";
-import { Link } from "react-router-dom";
 
 function App() {
 	const server =
@@ -15,7 +14,7 @@ function App() {
 	return (
 		<div className="App">
 			<header>archivify</header>
-			<Link to={`${server}/api/login`}>login</Link>
+			<a href={`${server}/api/login/`}>login</a>
 		</div>
 	);
 }
