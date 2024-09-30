@@ -1,20 +1,21 @@
 import { useEffect } from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
-	useEffect(() => {
-		fetch("/api/bye").then((response) =>
-			response.text().then((text) => console.log(text))
-		);
-		console.log("FETCHED");
-	}, []);
+	const server =
+		process.env.NODE_ENV === "development" ? "http://localhost:8080" : "";
+
+	// useEffect(() => {
+	// fetch("/api/login").then((res) =>
+	// 	res.text().then((text) => console.log(text))
+	// );
+	// }, []);
 
 	return (
 		<div className="App">
-			<header className="App-header">
-				<h1>HI</h1>
-				<h2>HI2</h2>
-			</header>
+			<header>archivify</header>
+			<Link to={`${server}/api/login`}>login</Link>
 		</div>
 	);
 }

@@ -1,11 +1,15 @@
 {
 	"dependencies": {
-		"express": "^4.20.0",
-		"nodemon": "^3.1.4"
+		"dotenv": "^16.4.5",
+		"express": "^4.20.0"
 	},
 	"scripts": {
 		"start": "node server.js",
 		"dev": "nodemon server.js"
 	},
-	"type": "module"
+	"type": "module",
+	"devDependencies": {
+		"cors": "^2.8.5",
+		"nodemon": "^3.1.7"
+	}
 }
